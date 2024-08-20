@@ -34,20 +34,46 @@ const Accordian = () => {
         "React handles events using a synthetic event system. Event handlers are passed as props to components and are used to respond to user interactions like clicks or form submissions.",
     },
   ];
+
   const [openID, setOpenID] = useState(null);
+  const [multiSelection, setMultiSelection] = useState(false);
+  const [multiple, setMultiple] = useState([]);
+
   const handleOpen = (id) => {
     setOpenID(openID === id ? null : id);
   };
+
+  const handleMulti = (id) => {
+    setMultiple((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+  };
+
   return (
     <>
       <div className="container">
+        <button onClick={() => setMultiSelection(!multiSelection)}>
+          {multiSelection
+            ? "Enable Single Selection"
+            : "Enable Multi Selection"}
+        </button>
         {data.map((item) => (
           <div className="accordian-body" key={item.id}>
             <div className="title">
               <h3>{item.question}</h3>
-              <button onClick={() => handleOpen(item.id)}>{}{openID === item.id ? '-' : "+"}</button>
+              <button
+                onClick={() =>
+                  !multiSelection ? handleOpen(item.id) : handleMulti(item.id)
+                }
+              >
+                {multiSelection ? (multiple.includes(item.id) ? "-" : "+") : openID === item.id ? "-" : "+"}
+              </button>
             </div>
-            {openID === item.id && <div className="text">{item.answer}</div>}
+            {(multiSelection ? multiple.includes(item.id) : openID === item.id) && (
+              <div className="text">
+                {item.answer}
+              </div>
+            )}
           </div>
         ))}
       </div>
