@@ -6,3 +6,4 @@ export { default as LoadMore } from "./Load More/LoadMore";
 export { default as TreeView } from "./Tree View/TreeView";
 export { default as QrCodeGenerator } from "./QR Code Generator/QrCodeGenerator";
 export { default as ThemeSwitcher } from "./Theme Switcher/ThemeSwitcher";
+export { default as ScrollIndicator} from "./Scroll Indicator/ScrollIndicator"

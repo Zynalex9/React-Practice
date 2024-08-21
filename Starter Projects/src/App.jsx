@@ -1,17 +1,59 @@
-import React from "react";
-import { Accordian, ColorPicker, ImageSlider, LoadMore, QrCodeGenerator, StarRating, ThemeSwitcher, TreeView } from "./components";
+import React, { useEffect, useState } from "react";
+import {
+  Accordian,
+  ColorPicker,
+  ImageSlider,
+  LoadMore,
+  QrCodeGenerator,
+  ScrollIndicator,
+  StarRating,
+  ThemeSwitcher,
+  TreeView,
+} from "./components";
 
 function App() {
+  const [scrolled, setScrolled] = useState(0);
+
+  function handleScrollPercentage() {
+    const scrolledHeight = document.documentElement.scrollTop;
+    const totalHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    setScrolled((scrolledHeight / totalHeight) * 100);
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrollPercentage);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollPercentage);
+    };
+  }, []);
+
   return (
     <>
+      <div
+        className="progress-container"
+        style={{ width: "100%", height: "20px", backgroundColor: "#f0f0f0" }}
+      >
+        <div
+          className="progress-bar"
+          style={{
+            width: `${scrolled}%`,
+            height: "20px",
+            backgroundColor: "red",
+            position: "fixed",
+          }}
+        ></div>
+      </div>
       <Accordian />
       <ColorPicker />
       <StarRating stars={5} />
       <ImageSlider url={"https://picsum.photos/v2/list"} page={1} limit={10} />
-      <LoadMore/>
-      <TreeView/>
-      <QrCodeGenerator/>
-      <ThemeSwitcher/>
+      <LoadMore />
+      <TreeView />
+      <QrCodeGenerator />
+      <ThemeSwitcher />
+      <ScrollIndicator />
     </>
   );
 }
