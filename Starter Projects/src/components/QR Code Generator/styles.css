@@ -1,0 +1,20 @@
+.QR-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+.QR-container h3{
+    font-size: 26px;
+    font-weight: 300;
+}
+.QR-container input{
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
