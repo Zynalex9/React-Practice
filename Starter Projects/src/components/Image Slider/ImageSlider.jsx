@@ -60,6 +60,7 @@ const ImageSlider = ({ url, page, limit }) => {
           {images.map((item, idx) => {
             return (
               <button
+              onClick={()=>setCurrentSlide(idx)}
                 key={idx}
                 className={
                   idx === currentSlide

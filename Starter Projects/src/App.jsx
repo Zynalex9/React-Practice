@@ -1,5 +1,5 @@
 import React from "react";
-import { Accordian, ColorPicker, ImageSlider, StarRating } from "./components";
+import { Accordian, ColorPicker, ImageSlider, LoadMore, StarRating } from "./components";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <ColorPicker />
       <StarRating stars={5} />
       <ImageSlider url={"https://picsum.photos/v2/list"} page={1} limit={10} />
+      <LoadMore/>
     </>
   );
 }
