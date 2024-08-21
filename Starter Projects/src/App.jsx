@@ -16,9 +16,7 @@ function App() {
 
   function handleScrollPercentage() {
     const scrolledHeight = document.documentElement.scrollTop;
-    const totalHeight =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
+    const totalHeight = document.documentElement.scrollHeight -  document.documentElement.clientHeight;
     setScrolled((scrolledHeight / totalHeight) * 100);
   }
   useEffect(() => {
@@ -40,7 +38,7 @@ function App() {
           style={{
             width: `${scrolled}%`,
             height: "20px",
-            backgroundColor: "red",
+            backgroundColor: "lightgreen",
             position: "fixed",
           }}
         ></div>
