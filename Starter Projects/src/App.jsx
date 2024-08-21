@@ -1,10 +1,11 @@
 import React from 'react';
-import { Accordian } from './components'
+import { Accordian, ColorPicker } from './components'
 
 function App() {
   return (
     <>
       <Accordian />
+      <ColorPicker/>
     </>
   );
 }
