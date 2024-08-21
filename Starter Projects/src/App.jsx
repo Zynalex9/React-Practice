@@ -4,8 +4,8 @@ import { Accordian, ColorPicker, StarRating } from './components'
 function App() {
   return (
     <>
-      {/* <Accordian />
-      <ColorPicker/> */}
+      <Accordian />
+      <ColorPicker/>
       <StarRating stars={5}/>
     </>
   );
