@@ -7,7 +7,7 @@ const LoadMore = () => {
   const [disableBtn, setDisableBtn] = useState(false);
   async function getProducts() {
     const response = await fetch(
-      `https://dummyjson.com/products?limit=20&skip=${skip}`
+      `https://dummyjson.com/products?limit=6&skip=${skip}`
     );
     const data = await response.json();
     setProducts((prevProducts) => [...prevProducts, ...data.products]);
@@ -17,7 +17,7 @@ const LoadMore = () => {
     getProducts();
   }, [skip]);
   useEffect(() => {
-    if (products.length === 100) setDisableBtn(true);
+    if (products.length === 60) setDisableBtn(true);
   }, [products]);
   return (
     <>

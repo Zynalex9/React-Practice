@@ -1,5 +1,5 @@
 import React from "react";
-import { Accordian, ColorPicker, ImageSlider, LoadMore, QrCodeGenerator, StarRating, TreeView } from "./components";
+import { Accordian, ColorPicker, ImageSlider, LoadMore, QrCodeGenerator, StarRating, ThemeSwitcher, TreeView } from "./components";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <LoadMore/>
       <TreeView/>
       <QrCodeGenerator/>
+      <ThemeSwitcher/>
     </>
   );
 }
