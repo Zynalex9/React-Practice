@@ -11,3 +11,4 @@ export { default as TabsParent } from "./Tabs/TabsParent";
 export { default as Finder } from "./Github Profile Finder/Finder";
 export { default as AutoComplete } from "./Auto Complete/AutoComplete";
 export { default as TicTacToe } from "./Tic-Tac-Toe/TicTacToe";
+export { default as Scroll } from "./Scrolling/Scroll";

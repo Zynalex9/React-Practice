@@ -13,6 +13,7 @@ import {
   ThemeSwitcher,
   TreeView,
   TicTacToe,
+  Scroll,
 } from "./components";
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
       <Finder/>
       <AutoComplete/>
       <TicTacToe />
+      <Scroll />
     </>
   );
 }
