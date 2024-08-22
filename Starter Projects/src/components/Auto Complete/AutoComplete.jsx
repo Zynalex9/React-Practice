@@ -51,7 +51,11 @@ const AutoComplete = () => {
             onChange={handleOnChange}
           />
         </div>
-        <DropDown users={filteredData} />
+        {filteredData.length ? (
+          <DropDown users={filteredData} />
+        ) : (
+          "Search a correct user"
+        )}
       </div>
     </>
   );
