@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.heading-container {
+  display: flex;
+  cursor: pointer;
+}
+.heading {
+background-color: skyblue;
+  border-right: 1px solid white;
+  padding: 40px;
+}
+.heading.active {
+  background-color: steelblue;
+  color: black;
+
+}
+.content p{
+    font-size: 30px;
+}

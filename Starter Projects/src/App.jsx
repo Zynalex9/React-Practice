@@ -7,6 +7,7 @@ import {
   QrCodeGenerator,
   ScrollIndicator,
   StarRating,
+  TabsParent,
   ThemeSwitcher,
   TreeView,
 } from "./components";
@@ -52,6 +53,7 @@ function App() {
       <QrCodeGenerator />
       <ThemeSwitcher />
       <ScrollIndicator />
+      <TabsParent/>
     </>
   );
 }
