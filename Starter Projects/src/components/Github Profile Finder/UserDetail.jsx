@@ -20,10 +20,10 @@ const UserDetail = ({ user }) => {
       </div>
       <div className="right">
         <a href={html_url} target="_blank" rel="noopener noreferrer" >
-          <h2>Name: {name}</h2>
+          <h2>Name: {name ? name : "Cannot find name"}</h2>
         </a>
         <a href={html_url} target="_blank" rel="noopener noreferrer">
-          <h2>Username: {login}</h2>
+          <h2>Username: {login ? login : ("Cannot find username") }</h2>
         </a>
         <p>
           <div className="bio">
