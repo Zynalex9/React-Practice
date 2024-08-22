@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   Accordian,
   ColorPicker,
+  Finder,
   ImageSlider,
   LoadMore,
   QrCodeGenerator,
@@ -44,7 +45,7 @@ function App() {
           }}
         ></div>
       </div>
-      <Accordian />
+      {/* <Accordian />
       <ColorPicker />
       <StarRating stars={5} />
       <ImageSlider url={"https://picsum.photos/v2/list"} page={1} limit={10} />
@@ -53,7 +54,8 @@ function App() {
       <QrCodeGenerator />
       <ThemeSwitcher />
       <ScrollIndicator />
-      <TabsParent/>
+      <TabsParent/> */}
+      <Finder/>
     </>
   );
 }
