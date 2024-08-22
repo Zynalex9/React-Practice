@@ -12,6 +12,7 @@ import {
   TabsParent,
   ThemeSwitcher,
   TreeView,
+  TicTacToe,
 } from "./components";
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
 
   function handleScrollPercentage() {
     const scrolledHeight = document.documentElement.scrollTop;
-    const totalHeight = document.documentElement.scrollHeight -  document.documentElement.clientHeight;
+    const totalHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
     setScrolled((scrolledHeight / totalHeight) * 100);
   }
   useEffect(() => {
@@ -58,6 +61,7 @@ function App() {
       <TabsParent/>
       <Finder/>
       <AutoComplete/>
+      <TicTacToe />
     </>
   );
 }
