@@ -1,0 +1,12 @@
+.wrap {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: column;
+}
+.searchBox {
+  width: 350px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}

@@ -9,3 +9,4 @@ export { default as ThemeSwitcher } from "./Theme Switcher/ThemeSwitcher";
 export { default as ScrollIndicator} from "./Scroll Indicator/ScrollIndicator"
 export { default as TabsParent} from "./Tabs/TabsParent"
 export { default as Finder} from "./Github Profile Finder/Finder"
+export { default as AutoComplete} from "./Auto Complete/AutoComplete"

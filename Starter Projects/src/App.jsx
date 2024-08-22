@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
   Accordian,
+  AutoComplete,
   ColorPicker,
   Finder,
   ImageSlider,
@@ -56,6 +57,7 @@ function App() {
       <ScrollIndicator />
       <TabsParent/>
       <Finder/>
+      <AutoComplete/>
     </>
   );
 }
