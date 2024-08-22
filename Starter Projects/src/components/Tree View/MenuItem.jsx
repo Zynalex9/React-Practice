@@ -1,31 +1,35 @@
 import React, { useState } from "react";
 import MenuList from "./MenuList";
+import { FaMinus, FaPlus } from "react-icons/fa";
 
 const MenuItem = ({ item }) => {
-  const [showChildren, setShowChildren] = useState(false);
+  const [displayCurrentChildren, setDisplayCurrentChildren] = useState({});
 
-  function handleClick() {
-    setShowChildren(!showChildren);
+  function handleToggleChildren(label) {
+    setDisplayCurrentChildren((prev) => ({
+      ...prev,
+      [label]: !prev[label],
+    }));
   }
 
   return (
     <li>
-      <div
-        className="text"
-        style={{
-          display: "flex",
-          gap: "10px",
-          cursor: item.children ? "pointer" : "default",
-        }}
-      >
+      <div className="menu-item">
         <p>{item.label}</p>
-        {item.children && (
-          <span onClick={handleClick} style={{ userSelect: "none" }}>
-            {showChildren ? "-" : "+"}
+        {item.children && item.children.length > 0 && (
+          <span onClick={() => handleToggleChildren(item.label)}>
+            {displayCurrentChildren[item.label] ? (
+              <FaMinus color="#fff" size={25} />
+            ) : (
+              <FaPlus color="#fff" size={25} />
+            )}
           </span>
         )}
       </div>
-      {showChildren && item.children ? <MenuList list={item.children} /> : null}
+
+      {item.children && item.children.length > 0 && displayCurrentChildren[item.label] && (
+        <MenuList list={item.children} />
+      )}
     </li>
   );
 };
