@@ -5,6 +5,10 @@
   align-items: center;
   justify-content: center;
 }
+.tic-tac-toe-container h1{
+    font-size: 25px;
+    margin: 25px 0; 
+}
 .square {
   background: rgb(216, 216, 216);
   border: 1px solid red;

@@ -37,7 +37,7 @@ function App() {
     <>
       <div
         className="progress-container"
-        style={{ width: "100%", height: "20px", backgroundColor: "#f0f0f0" }}
+        style={{ width: "100%", height: "20px", backgroundColor: "#fff" }}
       >
         <div
           className="progress-bar"
