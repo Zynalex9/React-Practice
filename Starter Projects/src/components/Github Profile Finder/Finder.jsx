@@ -52,7 +52,7 @@ const Finder = () => {
 
       <div className="userDetail">
         {loading ? (
-          <div>Loading... Please Wait</div>
+          <div style={{textAlign:"center",marginTop:"20px",fontWeight:"400"}}>Loading... Please Wait</div>
         ) : error ? (  <h1 style={{textAlign:"center",marginTop:"20px",fontWeight:"400"}}>{error}</h1>) : user ? (<UserDetail user={user} />) : null}
       </div>
     </div>

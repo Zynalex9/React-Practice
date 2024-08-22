@@ -14,23 +14,26 @@ const UserDetail = ({ user }) => {
   return (
     <div className="user-container">
       <div className="lef">
-        <a href={html_url}>
-          {" "}
+        <a href={html_url} target="_blank" rel="noopener noreferrer">
           <img src={avatar_url} alt={name} />
         </a>
       </div>
       <div className="right">
-        <a href={html_url}>
-          {" "}
+        <a href={html_url} target="_blank" rel="noopener noreferrer" >
           <h2>Name: {name}</h2>
         </a>
-        <a href={html_url}>
-          {" "}
+        <a href={html_url} target="_blank" rel="noopener noreferrer">
           <h2>Username: {login}</h2>
         </a>
         <p>
           <div className="bio">
-            <b>Bio</b>:{bio}
+            {bio ? (
+              <>
+                <b>Bio:</b> {bio}
+              </>
+            ) : (
+              "No Bio"
+            )}
           </div>
         </p>
         <div className="other">
