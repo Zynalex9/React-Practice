@@ -1,20 +1,25 @@
 .tree-view-container {
-    padding-left: 50px;
+  padding-left: 50px;
   min-height: 100vh;
   width: 350px;
   background: rgb(0, 71, 110);
 }
 
-.menu-item{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    cursor: pointer;
-    color: #fff;
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  color: #fff;
 }
 
 .menu-list-container {
-    list-style: none;
-    margin-top: 0px;
-    margin-bottom: 0px;
+  list-style: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+@media (max-width: 758px) {
+  .tree-view-container {
+    width: 120%;
+  }
 }

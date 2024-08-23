@@ -1,45 +1,107 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-.container{
+    box-sizing: border-box;
+  }
+  
+  .container {
     min-height: 100vh;
     margin: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 5px;
-}
-.container button {
+    gap: 10px;
+    padding: 0 10px; /* Add padding to avoid content touching the edges on mobile */
+  }
+  
+  .container button {
     padding: 10px 14px;
     background-color: seagreen;
     color: white;
     border-radius: 5px;
     border: 0;
-}
-.accordian-body{
-    width: 500px;
+    cursor: pointer;
+  }
+  
+  .accordian-body {
+    width: 100%;
+    max-width: 500px;
     position: relative;
     border: 2px solid black;
     padding: 20px;
-
-}
-.accordian-body .title{
+    margin: 5px 0;
+  }
+  
+  .accordian-body .title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.accordian-body .title button{
+  }
+  
+  .accordian-body .title button {
     padding: 10px 14px;
-  background-color: seagreen;
+    background-color: seagreen;
     color: white;
     font-size: 20px;
     border: 0;
     cursor: pointer;
-    
-}
-.accordian-body .text{
+  }
+  
+  .accordian-body .text {
     padding: 10px 0;
     text-align: center;
-}
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1024px) {
+    .accordian-body {
+      max-width: 400px;
+    }
+  
+    .accordian-body .title button {
+      font-size: 18px;
+    }
+  
+    .container button {
+      padding: 8px 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 5px; /* Adjust padding for smaller screens */
+    }
+  
+    .accordian-body {
+      max-width: 100%;
+    }
+  
+    .accordian-body .title button {
+      font-size: 16px;
+    }
+  
+    .container button {
+      padding: 6px 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .accordian-body {
+      padding: 15px;
+    }
+  
+    .accordian-body .title button {
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+  
+    .container button {
+      padding: 5px 8px;
+    }
+  
+    .accordian-body .text {
+      font-size: 14px;
+    }
+  }
+  
