@@ -26,7 +26,7 @@ const LoadMore = () => {
           <div className="product-card" key={idx}>
             <img src={item.thumbnail} alt="" className="product-img"/>
             <div className="title">
-              <h1>{item.title}</h1>
+              <h1 className="product-title">{item.title}</h1>
             </div>
             <div className="description">
               <p className="text-description">{item.description}</p>

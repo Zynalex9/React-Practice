@@ -13,9 +13,9 @@ const UserDetail = ({ user }) => {
   } = user;
   return (
     <div className="user-container">
-      <div className="lef">
+      <div className="left">
         <a href={html_url} target="_blank" rel="noopener noreferrer">
-          <img src={avatar_url} alt={name} />
+          <img src={avatar_url} alt={name} className="img" />
         </a>
       </div>
       <div className="right">
