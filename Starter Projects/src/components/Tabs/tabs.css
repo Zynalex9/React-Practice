@@ -26,3 +26,12 @@ background-color: skyblue;
 .content p{
     font-size: 30px;
 }
+@media (max-width:740px){
+  .tab-container{
+ width: 560px;   
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+  }
+}

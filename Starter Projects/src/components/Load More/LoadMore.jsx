@@ -24,12 +24,12 @@ const LoadMore = () => {
       <div className="product-container">
         {products.map((item, idx) => (
           <div className="product-card" key={idx}>
-            <img src={item.thumbnail} alt="" />
+            <img src={item.thumbnail} alt="" className="product-img"/>
             <div className="title">
               <h1>{item.title}</h1>
             </div>
             <div className="description">
-              <p>{item.description}</p>
+              <p className="text-description">{item.description}</p>
             </div>
             <div className="price">${item.price}</div>
           </div>
