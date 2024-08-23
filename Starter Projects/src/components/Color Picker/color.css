@@ -23,3 +23,13 @@
 .color-container button:active {
   transform: scale(0.98);
 }
+
+@media (max-width: 768px) {
+  .color-container {
+    width: 100%;
+    text-align: center;
+  }
+  .buttons button:last-child {
+    margin-top: 20px;
+  }
+}
