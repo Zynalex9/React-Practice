@@ -39,6 +39,8 @@ const Finder = () => {
 
   return (
     <div className="main-container">
+      <div className="user">
+
       <div className="search-user">
         <input
           onKeyDown={(e) => handleSearch(e)}
@@ -56,6 +58,8 @@ const Finder = () => {
         ) : error ? (  <h1 style={{textAlign:"center",marginTop:"20px",fontWeight:"400"}}>{error}</h1>) : user ? (<UserDetail user={user} />) : null}
       </div>
     </div>
+    </div>
+
   );
 };
 
